@@ -1,0 +1,39 @@
+<div class="rows">
+    <div class="col-sm-6">
+      <div class="well">
+        <h4>Number of Workshops:</h4>
+        <h4>{{nbatelier}}</h4> 
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="well">
+        <h4>Number of Members:</h4>
+        <h4>{{nbmembre}}</h4> 
+      </div>
+    </div>
+  </div>
+  <div class="rows">
+  <div class="col-sm-6">
+
+  <form  [formGroup]="searchform">
+    <div class="text-center">
+    Search & Edit
+  </div>
+    <span class="d-flex align-items-center" >
+    <select class="selectpicker" formControlName="select">
+        <option  disabled>choose workshop </option>
+        <option [ngValue]="a.id" *ngFor="let a of lesateliers">{{a.nom}}</option>
+      </select>
+
+    
+      <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal">
+        <span class="d-flex align-items-center">
+            <span class="small"   [routerLink]="['/dashboard/editworkshop/', searchform.get('select')?.value]"  style="font-style: oblique;font-family: AmstelvarAlpha;">Search</span>
+        </span>
+    </button>
+
+</span>
+</form>
+</div>
+</div>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">

@@ -1,0 +1,21 @@
+<div class=" py-5" id="di">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder" style="font-family: AmstelvarAlpha;">Our Workshops</h1>
+            <div class="text-center mt-4">
+               <p>{{time}}</p>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="card-body p-4 text-center d-flex flex-column justify-content-center  justify-content-around">
+    
+    <app-atelier></app-atelier>
+    <br>
+    <br><button class="btn btn-outline-dark" 
+    style="padding-left: 2.5rem; padding-right: 2.5rem; font-family: AmstelvarAlpha;"  
+    (click)="logout()">Logout
+</button>
+</div>

@@ -1,0 +1,97 @@
+{
+  "ateliers": [
+    {
+      "id": 1,
+      "nom": "frida khalo",
+      "description": "Workshop for beginners, inspired by Frida Kahlo. Frida Kahlo's painting style is often linked to surrealism, although she was never formally associated with this artistic movement. Her body of work is imbued with intense personal expression, shedding light on her life, emotions, and experiences.",
+      "date": "2023-11-12T10:00",
+      "lieu": "lac",
+      "image": "assets/frida.jpg",
+      "done": false
+    },
+    {
+      "id": 2,
+      "nom": "picasso",
+      "description": " Workshop for intermediates, inspired by Picasso. Picasso's painting style is renowned for its versatility and groundbreaking contributions to various art movements, including Cubism. In this workshop, participants can explore the dynamic and multifaceted approach of Picasso's work, gaining insights into his innovative techniques and artistic evolution.",
+      "date": "2024-01-12T12:00",
+      "image": "assets/picasso.jpg",
+      "lieu": "isetch",
+      "done": false,
+      "requests": [
+        {
+          "userId": 6,
+          "atelierId": 2,
+          "username": "aram",
+          "workshop": "picasso"
+        },
+        {
+          "userId": 6,
+          "atelierId": 2,
+          "username": "aram",
+          "workshop": "picasso"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nom": "leonardo davenchi",
+      "description": "Workshop for advanced participants, drawing inspiration from Leonardo da Vinci. Leonardo da Vinci, a true Renaissance master, left an indelible mark on art, science, and innovation. This advanced workshop delves into the genius of da Vinci, exploring his mastery of techniques, intricate compositions, and the intersection of art and scientific inquiry. Participants will engage with the complexities of da Vinci's work, unlocking advanced artistic insights and techniques.     ",
+      "date": "2023-12-04T18:00",
+      "lieu": "iset charguia",
+      "image": "assets/leo.jpg",
+      "done": true
+    },
+    {
+      "id": 4,
+      "nom": "claude monet",
+      "description": "Workshop for beginners, inspired by Claude Monet. Claude Monet, a pioneering figure in the Impressionist movement, revolutionized the art world with his use of color, light, and atmospheric effects. This introductory workshop invites participants to explore Monet's approach, learning the basics of impressionist techniques and capturing the essence of nature in their own creations. Discover the joy of brushstrokes and vibrant palettes inspired by Monet's timeless masterpieces.",
+      "date": "2024-12-16T10:00",
+      "lieu": "iset charguia",
+      "image": "assets/claude.jpg",
+      "done": false,
+      "requests": [
+        {
+          "userId": 6,
+          "atelierId": 4,
+          "username": "aram",
+          "workshop": "claude monet"
+        },
+        {
+          "userId": 2,
+          "atelierId": 4,
+          "username": "ali",
+          "workshop": "claude monet"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nom": "vincent van gogh",
+      "description": "Workshop for intermediate participants, drawing inspiration from Vincent van Gogh. Van Gogh, a post-Impressionist master, created emotive and vibrant works that continue to captivate art enthusiasts. In this intermediate-level workshop, participants will delve into the techniques and expressive brushstrokes characteristic of van Gogh's art. Explore the interplay of color, texture, and emotion, gaining a deeper understanding of the artist's unique approach to conveying mood and atmosphere in his iconic paintings.",
+      "date": "2024-06-01T16:00",
+      "lieu": "iset charguia",
+      "image": "assets/van.jpg",
+      "done": false,
+      "requests": [
+        {
+          "userId": 6,
+          "atelierId": 5,
+          "username": "aram",
+          "workshop": "vincent van gogh"
+        },
+        {
+          "userId": 1,
+          "atelierId": 5,
+          "username": "Eya",
+          "workshop": "vincent van gogh"
+        },
+        {
+          "userId": 2,
+          "atelierId": 5,
+          "username": "ali",
+          "workshop": "vincent van gogh"
+        }
+      ]
+    }
+  ]
+}

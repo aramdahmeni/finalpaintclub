@@ -1,0 +1,57 @@
+<div class="fond">
+  <br>
+<h1 class="col-md-6 offset-md-3 text-center mt-4" style="font-family: AmstelvarAlpha;">Login Form</h1>
+<br><br>
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-5 col-lg-9 col-xl-3 d-flex justify-content-center align-items-center h-100">
+        <img src="assets/art.jpg">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 ">
+        <form [formGroup]="loginform" (ngSubmit)="login()">
+          <div class="form-outline mb-4">
+              <label class="form-label " style="font-family: AmstelvarAlpha;" >Username :  </label>
+            <input type="text"  class="form-control form-control-lg" formControlName="user" #user placeholder="username"  />
+            
+          </div>
+          <div *ngIf="useroblig()" class="alert alert-danger">
+            Your Username is necessary to login!
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+              <label class="form-label" style="font-family: AmstelvarAlpha;">Password :</label>
+            <input type="password" class="form-control form-control-lg" formControlName="pwd" #pwd placeholder="password"/>
+          </div>
+          <div *ngIf="pwdoblig()" class="alert alert-danger">
+            Your Password is necessary to login!
+          </div>
+
+         
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-outline-danger" 
+             style="padding-left: 2.5rem; padding-right: 2.5rem;"  
+            [disabled]="loginform.invalid">Login
+          </button>
+            
+            <span class="small fw-bold mt-2 pt-1 mb-0"> or   </span>   
+      
+            <input type="reset" value="Reset Form" (click)="onreset()" class="btn btn-outline-danger"  style="padding-left: 2.5rem; padding-right: 2.5rem;">
+             <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? 
+              <a class="btn btn-outline-danger btn-sm" routerLink="/signin" >Sign Up</a></p>
+
+             <br>
+             <p class="small fw-bold mt-2 pt-1 mb-0">Can't remember your password? Change it!
+              <a class="btn btn-outline-danger btn-sm" routerLink="/changepwd" >Change Password</a></p>
+
+ 
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
+</div>

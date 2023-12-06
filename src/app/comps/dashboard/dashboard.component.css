@@ -1,0 +1,25 @@
+.content{
+    background-color: rgba(255, 241, 185, 0.5);
+    height: 100vh;
+    display: flex;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.rows{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex:1;
+    padding: 20px;
+    justify-content: space-around;
+
+
+}
+
+.app-nav{
+    height: 100vh;
+}

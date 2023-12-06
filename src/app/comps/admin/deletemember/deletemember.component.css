@@ -1,0 +1,23 @@
+button{
+    position: relative;
+    left: 41%;
+    font-size: larger;
+}
+.elements{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex:1;
+    padding: 20px;
+}
+.col-md-6 {
+    display: flex;justify-content: space-around;
+    flex-direction: row;
+    position: relative;
+    left: 60%;
+     
+}
+h2{
+    position: relative;
+    left: 40%;
+}

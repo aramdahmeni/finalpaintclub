@@ -1,0 +1,69 @@
+<div class="fond">
+    <br>
+  <h1 class="col-md-6 offset-md-3 text-center mt-4" style="font-family: AmstelvarAlpha;">Change Your Password</h1>
+  <br><br>
+  <section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-5 col-lg-9 col-xl-3 d-flex justify-content-center align-items-center h-100">
+          <img src="assets/change.jpg">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 ">
+          <form [formGroup]="changeform" >
+            <div class="form-outline mb-4">
+                <label class="form-label " style="font-family: AmstelvarAlpha;" >Username :  </label>
+              <input type="text"  class="form-control form-control-lg" formControlName="user" #user placeholder="username"  />
+              <div *ngIf="useroblig()" class="alert alert-danger">
+                Your Username is necessary!
+              </div>
+              <div *ngIf="uservalid()" class="alert alert-warning">
+                Your Username can only contain letters and/or numbers and cant contain spaces
+              </div>
+            </div>
+            
+            <div class="form-outline mb-3">
+                <label class="form-label" style="font-family: AmstelvarAlpha;">New Password :</label>
+              <input type="password" class="form-control form-control-lg" formControlName="pwd" #pwd placeholder="password"/>
+              <div *ngIf="pwdoblig()" class="alert alert-danger">
+                Your password is necessary!
+              </div>
+              <div *ngIf="pwdvalid()" class="alert alert-warning">
+                Your password can only contain letters and/or numbers and at least 4 characters long and it cant contain spaces.
+              </div>
+            </div>
+
+            <div class="form-outline mb-3">
+              <label class="form-label" style="font-family: AmstelvarAlpha;">Confirm Password :</label>
+            <input type="password" class="form-control form-control-lg" formControlName="confirm" #confirmpwd placeholder="confirm password"/>
+            <div *ngIf="confoblig()" class="alert alert-danger">
+              You need to confirm your password!
+            </div>
+            <div *ngIf="confvalid()" class="alert alert-warning">
+              Your passwords need to match!  
+            </div>
+          </div>
+            
+            
+  
+           
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button class="btn btn-outline-danger" (click)="change(user.value, pwd.value)"
+               style="padding-left: 2.5rem; padding-right: 2.5rem;"  
+              [disabled]="changeform.invalid">Change Password
+            </button>
+            <br> <br>
+            <a class="btn btn-outline-danger"  routerLink="/login"
+               style="padding-left: 2.5rem; padding-right: 2.5rem;">Cancel
+          </a>
+              
+              
+   
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  
+  </section>
+  </div>

@@ -1,0 +1,12 @@
+img{
+    size: 75%;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s ease-out;
+}
+img:hover{
+    transform: scale(1.025);
+
+}
+section{
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,25 @@
+
+  <h2 class="text-center">Delete Member!</h2>
+  <br><br>
+
+  <form class="row g-3 mx-auto" [formGroup]="deleteform">
+  <div class="elements">
+    <div class="col-md-6">
+      <label>Choose member to remove:</label>
+      <select class="form-select" formControlName="select">
+        <option disabled>Choose member</option>
+        <option *ngFor="let mb of membres" [ngValue]="mb.id">{{mb.nom}}</option>
+      </select>
+    </div>
+
+    <div *ngIf="selectoblig()" class="alert alert-danger mt-2 col-md-6">
+      Selection is necessary!
+    </div>
+  </div>
+    <div class="col-12 d-flex justify-content-center mt-4">
+      <button class="btn btn-outline-danger" (click)="delete()" style="padding-left: 2.5rem; padding-right: 2.5rem;" [disabled]="deleteform.invalid">
+        Delete Member
+      </button>
+    </div>
+
+  </form>

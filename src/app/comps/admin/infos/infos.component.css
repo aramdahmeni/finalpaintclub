@@ -1,0 +1,27 @@
+.rows{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex:1;
+    padding: 20px;
+    justify-content: space-around;
+    position: relative;
+    left: 70%;
+    top: 30%;
+
+
+}
+.well{
+    height: 120px;
+    text-align: center;
+    width: 150px;
+    background-color:  #6d7fcc;
+    padding: 10px;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s ease-out;
+
+}
+.well:hover{
+    transform: scale(1.025);
+
+}

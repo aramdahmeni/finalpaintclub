@@ -1,0 +1,44 @@
+{
+  "membres": [
+    {
+      "id": 1,
+      "nom": "eya abdellaoui",
+      "specialite": "DSI",
+      "numtel": 22500600,
+      "username_mb": "Eya",
+      "password_mb": "test33"
+    },
+    {
+      "id": 2,
+      "nom": "ali benali",
+      "specialite": "TI",
+      "numtel": 29977445,
+      "username_mb": "ali",
+      "password_mb": "alinew"
+    },
+    {
+      "id": 5,
+      "nom": "bayrem tounsi",
+      "specialite": "DSI",
+      "numtel": 22555100,
+      "username_mb": "bayrem tn",
+      "password_mb": "bayremdsi"
+    },
+    {
+      "id": 6,
+      "nom": "Aram Dahmeni",
+      "numtel": 12345678,
+      "specialite": "TI",
+      "username_mb": "aram",
+      "password_mb": "aram10"
+    },
+    {
+      "nom": "Test",
+      "numtel": 12345678,
+      "specialite": "DSI",
+      "username_mb": "newperson",
+      "password_mb": "newtest",
+      "id": 8
+    }
+  ]
+}

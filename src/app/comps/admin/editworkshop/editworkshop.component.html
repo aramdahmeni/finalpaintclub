@@ -1,0 +1,39 @@
+<div class="container">
+    <h2 class="col-md-12 text-center mt-4" style="font-weight: bold;">You are editing: `{{nom}}` workshop</h2>
+    <br><br> <br>
+    <br>
+    <form class="row g-3" [formGroup]="editform" (ngSubmit)="edit()">
+        <div class="col-md-5">
+            <label class="form-label"> Name</label>
+            <input type="text" class="form-control" formControlName="nom">
+          </div>
+
+          <div class="col-md-5">
+            <label class="form-label"> image</label>
+            <input type="text" class="form-control" formControlName="image">
+          </div>
+      <div class="col-md-5">
+        <label class="form-label"> Description</label>
+        <input type="text" class="form-control" formControlName="description">
+      </div>
+  
+      <div class="col-md-5">
+        <label class="form-label"> Date</label>
+        <input type="datetime-local" class="form-control" formControlName="date">
+      </div>
+  
+      <div class="col-md-5">
+        <label class="form-label"> Location</label>
+        <input type="text" class="form-control" formControlName="lieu">
+      </div>
+  
+      <div class="col-12" style="text-align: center;">
+        <br>
+        <br>
+        <button type="submit" class="btn btn-outline-danger" [disabled]="!dirtyform" 
+          style="padding-left: 2.5rem; padding-right: 2.5rem;" > Edit Workshop 
+          </button>
+      </div>
+    </form>
+  </div>
+  

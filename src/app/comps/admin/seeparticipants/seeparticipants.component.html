@@ -1,0 +1,19 @@
+<div class="container text-center">
+  <h2 >List of Participants</h2>
+  <br>
+      <table class="table">
+          <thead class="thead-dark">
+              <tr>
+                  <th>Username</th>
+                  <th>Workshop</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let r of requests">
+                  <td>{{ r.username }}</td>
+                  <td>{{ r.workshop }}</td>
+              </tr>
+          </tbody>
+      </table>
+  
+</div>

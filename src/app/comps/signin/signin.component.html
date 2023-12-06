@@ -1,0 +1,83 @@
+
+  <h2  class="col-md-6 offset-md-3 text-center mt-4" style="font-weight: bold;">Sign Up Form</h2>
+  <br><br>
+<form class="row g-3" [formGroup]="signinform" (ngSubmit)="onSubmit()" >
+    <div class="col-md-6">
+      <label class="form-label" >Full Name</label>
+      <input type="text" class="form-control" formControlName="nom" >
+      <div *ngIf="nomoblig()" class="alert alert-danger">
+        Your name is necessary to sign in!
+      </div>
+      <div *ngIf="valid()" class="alert alert-warning">
+        Your name must be at least 3 letters long, only contain letters only and should start with an uppercase.
+      </div>
+      
+    </div>
+    
+
+
+    <div class="col-md-6">
+      <label  class="form-label" >Phone number</label>
+      <input type="number" class="form-control"  formControlName="numtel" >
+      <div *ngIf="numoblig()" class="alert alert-danger">
+        Your phone number is necessary to sign in!
+      </div>
+      <div *ngIf="validnum()" class="alert alert-warning">
+        Your number must contain 8 numbers.
+      </div>
+    </div>
+   
+    
+    
+
+
+
+    <!--specialite-->
+    <div class="col-md-6">
+        <label for="inputState" class="form-label" >Specialty</label>
+        <select class="form-select" formControlName="specialite">
+          <option *ngFor="let s of lespec" [value]="s" >{{s}}</option>
+        </select>
+      </div>
+
+
+
+      <div class="col-md-6">
+        <label class="form-label" >Username</label>
+        <input type="text" class="form-control" formControlName="username_mb" placeholder="username">
+        <div *ngIf="useroblig()" class="alert alert-danger">
+          Your Username is necessary to sign in!
+        </div>
+        <div *ngIf="uservalid()" class="alert alert-warning">
+          Your Username can only contain letters and/or numbers and cant contain spaces
+        </div>
+      </div>
+
+      
+
+
+      <div class="col-md-6">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control"  formControlName="password_mb" placeholder="password">
+           <div *ngIf="pwdoblig()" class="alert alert-danger">
+        Your password is necessary to sign in!
+      </div>
+      <div *ngIf="pwdvalid()" class="alert alert-warning">
+        Your password can only contain letters and/or numbers and at least 4 characters long and it cant contain spaces.
+      </div>
+
+      </div>
+
+   
+
+    <div class="col-12" style="text-align: center;"> 
+      <br>
+      <br>
+      <input type="submit" value="sign Up " class="btn btn-outline-danger"
+      style="padding-left: 2.5rem; padding-right: 2.5rem;" [disabled]="signinform.invalid" >
+
+      <span class="small fw-bold mt-2 pt-1 mb-0"> or   </span>           
+      <input type="reset" value="Reset" (click)="onreset()" class="btn btn-outline-danger"  style="padding-left: 2.5rem; padding-right: 2.5rem;">
+              
+    </div>
+  </form>

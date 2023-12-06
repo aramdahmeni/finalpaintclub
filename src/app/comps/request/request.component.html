@@ -1,0 +1,47 @@
+<div class="fond">
+    <br>
+  <h1 class="col-md-6 offset-md-3 text-center mt-4" style="font-family: AmstelvarAlpha;">Confirm Request</h1>
+  <br><br>
+  <section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-5 col-lg-9 col-xl-3 d-flex justify-content-center align-items-center h-100">
+          <img src="{{image}}">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 ">
+          <form [formGroup]="requestform" (ngSubmit)="onsubmit()" >
+            <div class="form-outline mb-4">
+                <label class="form-label " style="font-family: AmstelvarAlpha;" >Username :  </label>
+              <input type="text"  class="form-control form-control-lg" formControlName="user"  #user placeholder="username"  />
+              <div *ngIf="useroblig()" class="alert alert-danger">
+                Your Username is necessary!
+              </div>
+            </div>
+            
+            <div class="form-outline mb-3">
+                <label class="form-label" style="font-family: AmstelvarAlpha;">Workshop :</label>
+              <input type="text" class="form-control form-control-lg" formControlName="workshop" 
+              [value]="nomworkshop" #workshop placeholder="workshop" />
+             
+            </div>
+            
+            
+  
+           
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button class="btn btn-outline-danger" 
+               style="padding-left: 2.5rem; padding-right: 2.5rem;"  
+              [disabled]="requestform.invalid">Send Request
+            </button>
+              
+              
+   
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  
+  </section>
+  </div>

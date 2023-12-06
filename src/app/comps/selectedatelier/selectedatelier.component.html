@@ -1,0 +1,27 @@
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center border p-2">
+            <div class="col-md-6">
+                <img class="card-img-top mb-5 mb-md-0" src="{{image}}" />
+                
+            </div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder">{{nom}}</h1>
+                <div class="fs-5 mb-5">
+                    <span>{{date | date :'fullDate'}} </span> <br>
+                    <span>at: {{lieu | pipeperso}}</span>
+                </div>
+                
+                <p class="lead">{{description}}</p>
+                <label class="display-6 ">Want to join?</label> <br> <br>
+                <button class="btn btn-outline-danger d-flex justify-content-center "
+                   style="padding-left: 2.5rem; padding-right: 2.5rem; width: 500px;"  [disabled]="done"
+                   (click)="redirectToRequest()" >Send Request!</button>
+            </div>
+            <div class="col-md-6 text-end">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>

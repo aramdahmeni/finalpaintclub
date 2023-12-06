@@ -1,0 +1,24 @@
+<h2 class="text-center">Delete Workshop!</h2>
+<br><br>
+
+<form class="row g-3 mx-auto" [formGroup]="atelierdeleteform"  >
+<div class="elements">
+  <div class="col-md-6">
+    <label>Choose workshop to delete:</label>
+    <select class="form-select" name="" id="" formControlName="select">
+      <option disabled>Choose workshop</option>
+      <option *ngFor="let a of atelier" [ngValue]="a.id">{{a.nom}}</option>
+    </select>
+  </div>
+
+  <div *ngIf="selectoblig()" class="alert alert-danger mt-2 col-md-6">
+    Selection is necessary!
+  </div>
+</div>
+  <div class="col-12 d-flex justify-content-center mt-4">
+    <button type="submit" class="btn btn-outline-danger" (click)="delete()" style="padding-left: 2.5rem; padding-right: 2.5rem;" [disabled]="atelierdeleteform.invalid">
+      Delete Workshop
+    </button>
+  </div>
+
+</form>
